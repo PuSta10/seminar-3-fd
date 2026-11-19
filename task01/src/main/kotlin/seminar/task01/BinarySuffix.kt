@@ -1,7 +1,14 @@
 package seminar.task01
 
 fun transform(n: Int): Int {
-    TODO("Преобразуйте двоичную запись числа")
+    var rez = n.toString(2)
+
+    if (n % 2 == 0) {
+        rez += "00"
+    } else {
+        rez += "11"
+    }
+    return rez.toInt(2)
 }
 
 fun maxNBelow(limit: Int): Int {
