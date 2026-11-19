@@ -10,7 +10,6 @@ class TravelCard(initialTrips: Int) {
 
     fun topUp(trips: Int) {
         require(trips > 0)
-        if (remainingTrips > 0)
         remainingTrips += trips
     }
 
