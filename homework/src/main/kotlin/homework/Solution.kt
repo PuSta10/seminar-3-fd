@@ -10,8 +10,8 @@ object LibraryRules {
     fun loanDays(genre: Genre): Int {
         val day = when (genre) {
             Genre.FANTASY -> 21
-            Genre.SCIENCE -> 14
-            Genre.ADVENTURE -> 7
+            Genre.SCIENCE -> 7
+            Genre.ADVENTURE -> 14
         }
         return day;
     }
@@ -121,7 +121,7 @@ class Library(private val books: Array<Book>, private val notifier: Notifier) {
 
     fun report(): String {
         if (books.size == 0) {
-            return "Библиотека пуста\n"
+            return "Библиотека пуста"
         } else {
             var message = "";
             for (book in books) {
@@ -137,7 +137,7 @@ class Library(private val books: Array<Book>, private val notifier: Notifier) {
                     message += "выдана\n"
                 }
             }
-            return message;
+            return message.dropLast(2);
         }
     }
 }
