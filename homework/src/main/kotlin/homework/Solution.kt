@@ -128,14 +128,15 @@ class Library(private val books: Array<Book>, private val notifier: Notifier) {
                 message += "${book.id}";
                 message += ". ";
                 message += book.title;
-                message += " - ";
+                message += " — ";
                 message += book.author;
                 message += ": ";
                 if (book.isAvailable) {
-                    message += "доступна\n"
+                    message += "доступна"
                 } else {
-                    message += "выдана\n"
+                    message += "выдана"
                 }
+                message += "\n";
             }
             return message.dropLast(1);
         }
