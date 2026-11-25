@@ -137,7 +137,7 @@ class Library(private val books: Array<Book>, private val notifier: Notifier) {
                     message += "выдана\n"
                 }
             }
-            return message.dropLast(2);
+            return message.dropLast(1);
         }
     }
 }
